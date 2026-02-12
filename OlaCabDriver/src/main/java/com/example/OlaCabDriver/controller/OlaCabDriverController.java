@@ -19,7 +19,7 @@ public class OlaCabDriverController {
 	private OlaCabDriverServices olaCabDriverServices;
 	@PostMapping("/updateLocation")
 	public ResponseEntity<?> updateLocation(){
-		this.olaCabDriverServices.UpdateCabLocation("("+Math.round(Math.random())*100+","+Math.round(Math.random())*100+")");
+		this.olaCabDriverServices.UpdateCabLocation("("+Math.round(Math.random()*100)+","+Math.round(Math.random()*100)+")");
 		return new ResponseEntity<>(Map.of("message","Location is printed by cab"),HttpStatus.OK);
 	}
 	
